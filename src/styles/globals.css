@@ -19,6 +19,103 @@
   }
 }
 
+.gradient {
+  @apply absolute bottom-0 right-0 select-none bg-linear-to-t overflow-hidden w-full h-[500px] from-rose-500/[15%] to-transparent
+}
+.btn {
+  @apply focus:ring-0 focus:scale-[101%] focus:outline-none border-1 border-transparent bg-white/[3%] flex hover:scale-[101%] items-center justify-center transition-all duration-500 cursor-pointer px-5 py-3 rounded-[20px];
+}
+.btn-primary {
+  @apply bg-rose-500/[75%];
+}
+.btn-secondary {
+  @apply hover:border-white/[5%];
+}
+.btn-danger:not(.btn-disabled) {
+  @apply bg-red-500/[35%] focus:bg-red-500/[65%] hover:bg-red-500/[65%];
+}
+.btn-success:not(.btn-disabled) {
+  @apply bg-green-500/[35%] focus:bg-green-500/[65%] hover:bg-green-500/[65%];
+}
+.btn-disabled {
+  @apply text-stone-400 cursor-not-allowed hover:scale-[1];
+}
+.input {
+  @apply w-full px-5 py-3.5 rounded-[20px] bg-transparent border border-white/[10%] text-white placeholder-white/[40%] focus:outline-none focus:bg-white/[3%] focus:ring-2 focus:ring-rose-500 hover:bg-white/[5%] hover:scale-[101%] focus:scale-[101%] transition-all duration-500;
+}
+.select {
+  @apply w-full px-5 py-3.5 rounded-[20px] bg-white/[3%] border border-white/[5%] text-white focus:outline-none focus:ring-2 focus:ring-rose-500 transition-all duration-500;
+}
+.card {
+  @apply hover:scale-[101%] p-3 border-1 border-transparent rounded-[20px] text-center cursor-pointer transition-all duration-500;
+}
+.card-left {
+  @apply hover:scale-[101%] px-5 py-3 border-1 border-transparent rounded-[20px] text-left cursor-pointer transition-all duration-500;
+}
+.card-gray {
+  @apply bg-white/[3%] text-gray-300 hover:bg-white/[5%] hover:border-white/[5%];
+}
+.card-primary {
+  @apply bg-rose-500/[75%] text-white;
+}
+
+.title {
+  @apply text-xl font-semibold mb-4;
+}
+.list-item {
+  @apply p-2 bg-gray-800 rounded-lg shadow;
+}
+.role-card {
+  @apply bg-gray-800 rounded-[20px] flex flex-col items-center justify-between p-7 text-center transition-all duration-500 hover:scale-[101%] cursor-pointer;
+}
+.role-card-virus {
+  @apply bg-red-500/[15%] text-white hover:bg-red-500/[25%];
+}
+.role-card-service {
+  @apply bg-blue-500/[15%] text-white hover:bg-blue-500/[25%];
+}
+.role-name {
+  @apply text-sm text-white/[35%];
+}
+.role-title {
+  @apply text-2xl font-bold;
+}
+.role-accomplices {
+  @apply text-lg font-medium;
+}
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out forwards;
+}
+.animate-fade-out {
+  animation: fadeOut 0.3s ease-in forwards 2.7s; /* Начинается за 0.3с до конца 3с */
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+*, html, body {
+  font-family: "Onest", sans-serif;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
