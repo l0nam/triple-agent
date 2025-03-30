@@ -1,112 +1,40 @@
-Вот пример README для твоего проекта "Тройной агент", который можно добавить в корень репозитория. Он включает описание игры, инструкции по установке, запуску и деплою на GitHub Pages, а также немного стилизации для читаемости на GitHub. Ты можешь адаптировать текст под свои нужды, если что-то нужно изменить!
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
----
+## Getting Started
 
-# Тройной агент
+First, run the development server:
 
-**Тройной агент** — это веб-приложение на React для проведения настольной игры в стиле "мафии", где игроки получают роли (Секретная организация или VIRUS) и выполняют операции, чтобы определить победителя. Игра поддерживает индивидуальные условия победы, голосование и динамическое завершение партии.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Описание
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-В "Тройном агенте" игроки делятся на две команды: **Секретная организация** и **VIRUS**. Цель игры зависит от роли:
-- **Секретная организация**: вычислить и арестовать агентов VIRUS.
-- **VIRUS**: остаться незамеченными и подставить других.
-- **Индивидуальная победа**: некоторые игроки могут получить уникальные условия победы (например, "Козёл отпущения" выигрывает, если его арестуют), что делает их единственным победителем.
+[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-Игра проходит в несколько фаз: настройка, выдача ролей, выполнение операций, голосование и подведение итогов.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
 
----
+This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Установка
+## Learn More
 
-1. **Клонируй репозиторий**:
-   ```bash
-   git clone https://github.com/<username>/<repository-name>.git
-   cd <repository-name>
-   ```
+To learn more about Next.js, take a look at the following resources:
 
-2. **Установи зависимости**:
-   ```bash
-   npm install
-   ```
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
 
-3. **Запусти проект локально**:
-   ```bash
-   npm run dev
-   ```
-   Открой браузер по адресу `http://localhost:3000` (или другой порт, указанный в консоли).
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
----
+## Deploy on Vercel
 
-## Использование
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-1. **Настройка**:
-   - Введи имена игроков (минимум 5).
-   - Нажми "Начать игру".
-
-2. **Роли**:
-   - Каждому игроку выдаётся роль (кликни на карточку, чтобы скопировать описание).
-
-3. **Операции**:
-   - Выполняй операции по очереди, следуя инструкциям.
-   - Используй таймер для обсуждений.
-
-4. **Голосование**:
-   - Голосуй за игрока, которого нужно арестовать.
-   - Завершай голосование кнопкой "Завершить голосование".
-
-5. **Результаты**:
-   - Узнай, кто арестован и кто победил (игрок или команда).
-
----
-
-## Деплой на GitHub Pages
-
-1. **Установи `gh-pages`**:
-   ```bash
-   npm install gh-pages --save-dev
-   ```
-
-2. **Настрой `package.json`**:
-   - Добавь:
-     ```json
-     "homepage": "https://<username>.github.io/<repository-name>/",
-     "scripts": {
-       "predeploy": "npm run build",
-       "deploy": "gh-pages -d build"
-     }
-     ```
-
-3. **Залей проект**:
-   ```bash
-   npm run deploy
-   ```
-
-4. **Настрой GitHub Pages**:
-   - В репозитории: **Settings** → **Pages**.
-   - Выбери ветку `gh-pages`, папку `/ (root)`, сохрани.
-   - Сайт будет доступен по адресу: `https://<username>.github.io/<repository-name>/`.
-
----
-
-## Требования
-
-- **Node.js**: v14 или выше.
-- **npm**: v6 или выше.
-- Браузер с поддержкой ES6.
-
----
-
-## Особенности
-
-- **Случайный выбор при ничьей**: при равенстве голосов арестуется случайный игрок из лидеров.
-- **Индивидуальная победа**: если игрок выполнил своё условие (например, "Козёл отпущения" арестован), он побеждает один.
-- **Сохранение состояния**: игра сохраняется в `localStorage` для продолжения после перезагрузки.
-
----
-
-## Лицензия
-
-Проект распространяется под лицензией [MIT](LICENSE). Используй, модифицируй и делись свободно!
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
